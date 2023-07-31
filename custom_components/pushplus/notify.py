@@ -27,7 +27,8 @@ class PushPlusNotificationService(BaseNotificationService):
         self._topic = topic
         self._template = template
     def send_message(self, message='', **kwargs):
-        url = '{}?token={}&topic={}&template={}&'.format(_RESOURCE, self._token, self._topic, self._template)
+        #url = '{}?token={}&topic={}&template={}&'.format(_RESOURCE, self._token, self._topic, self._template)
+        url = '{}?token={}&'.format(_RESOURCE,token)
         title = kwargs.get(ATTR_TITLE)
         if title:
            timestp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
